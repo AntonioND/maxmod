@@ -20,7 +20,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.           *
  ****************************************************************************/
 
-@ Layer Information
+@ Layer Information = mpl_layer_information
 @ -----------------
 
 .equ	MPL_TICK	,0
@@ -60,7 +60,7 @@
 .equ	mpl_reserved3	,54
 .equ	MPL_SIZE	,56
 
-@ active information
+@ active information = mpv_active_information
 @--------------------
 
 .equ	MPV_PATTREAD_P	,4
@@ -71,7 +71,7 @@
 .equ	MPV_PANPLUS	,12
 .equ	MPV_SIZE	,14
 
-@ Module Channel
+@ Module Channel = mm_module_channel
 @ --------------
 
 .EQU	MCH_ALLOC,	0 @ ALLOCATED ACTIVE CHANNEL#
@@ -96,7 +96,7 @@
 .EQU	MCH_MEMORY,	23 @ 15 bytes
 .EQU	MCH_SIZE,	40 @ sizeof( module_channel ) @ 2 extra bytes
 
-@ Active Channel
+@ Active Channel = mm_active_channel
 @ --------------
 
 .EQU	MCA_PERIOD,	0	@ internal period

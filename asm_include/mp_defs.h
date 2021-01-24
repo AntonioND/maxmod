@@ -21,16 +21,37 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.           *
  ****************************************************************************/
 
-#ifndef MM_MIXER_GBA_H
-#define MM_MIXER_GBA_H
+#ifndef MP_DEFS_H
+#define MP_DEFS_H
 
-#include "mp_mixer_gba.h"
+// Song 'mode' can be one of the following:
+#define MPP_PLAY_LOOP   0
+#define MPP_PLAY_ONCE   1
+#define MPP_PLAY_JINGLE 2
 
-extern mm_word mm_mixlen;
-extern mm_mixer_channel *mm_mixchannels;
-extern mm_word mm_bpmdv;
+
+#ifdef SYS_GBA
+
+// Number of bits used in fractional part of sample reading
+#define SAMPFRAC        12
+
+#endif
 
 
-void mmMixerInit(mm_gba_system* setup);
+#define MP_SCHANNELS    4
 
-#endif // MM_MIXER_GBA_H
+// Callback parameters
+
+#define MMCB_SONGREQUEST    0x1A // nds9
+#define MMCB_SAMPREQUEST    0x1B // nds9
+#define MMCB_DELETESONG     0x1C // nds9
+#define MMCB_DELETESAMPLE   0x1D // nds9
+
+// #define MPCB_SAMPMEMORY     0x1E // ---
+// #define MPCB_SONGMEMORY     0x1F // ---
+#define MMCB_BANKMEMORY     0x1E // nds9
+
+#define MPCB_SONGMESSAGE    0x2A // gba/nds7 song playback
+#define MPCB_SONGFINISHED   0x2B // gba/nds7
+
+#endif // MP_DEFS_H
