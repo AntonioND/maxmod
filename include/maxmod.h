@@ -178,7 +178,7 @@ inline void mmSetPosition( mm_word position )
  * Returns nonzero if module is playing.
  ****************************************************************************/
 
-int  mmActive( void );
+mm_bool mmActive( void );
 
 /****************************************************************************
  * mmJingle( mm_word module_ID )
@@ -196,7 +196,7 @@ void mmJingle( mm_word module_ID );
  * Returns nonzero if a jingle is actively playing.
  ****************************************************************************/
 
-int  mmActiveSub( void );
+mm_bool mmActiveSub( void );
 
 /****************************************************************************
  * mmSetModuleVolume( mm_word volume )
