@@ -26,6 +26,8 @@
 
 #include "mm_types.h"
 
+extern mm_voidfunc mm_vblank_function;
+
 // Address of soundbank in memory/rom
 extern mm_addr mp_solution;
 
